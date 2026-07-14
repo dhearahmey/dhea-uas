@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@laundry.com',
             'password' => Hash::make('password'),
             'role_id' => 1,
-            'phone' => '081234567890',
+            'phone' => '082117304711',
             'address' => 'Jl. Laundry No. 1'
         ]);
     }

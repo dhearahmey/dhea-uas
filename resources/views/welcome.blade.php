@@ -11,72 +11,229 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            color: white;
-        }
-        .hero p {
-            font-size: 1.25rem;
-            color: rgba(255,255,255,0.9);
-        }
-        .btn-hero {
-            background: white;
-            color: #764ba2;
-            padding: 12px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-hero:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            color: #764ba2;
-        }
-        .btn-hero-outline {
-            border: 2px solid white;
-            color: white;
-            padding: 12px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-hero-outline:hover {
-            background: white;
-            color: #764ba2;
-        }
-        .feature-icon {
-            font-size: 3rem;
-            color: #764ba2;
-        }
-        .footer {
-            background: #1a1a2e;
-            color: white;
-            padding: 40px 0;
-        }
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: white !important;
-        }
-        .nav-link {
-            color: rgba(255,255,255,0.8) !important;
-        }
-        .nav-link:hover {
-            color: white !important;
-        }
-    </style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#F8FDFF;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:rgba(86,210,228,.95)!important;
+backdrop-filter:blur(12px);
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.navbar-brand{
+font-size:1.6rem;
+font-weight:700;
+color:#fff!important;
+}
+
+.nav-link{
+color:white!important;
+font-weight:500;
+margin-left:8px;
+transition:.3s;
+}
+
+.nav-link:hover{
+opacity:.8;
+}
+
+.navbar .btn-outline-light{
+border-radius:30px;
+padding:8px 22px;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#93EAF7,#74DDEB,#58D4E6);
+min-height:80vh;
+display:flex;
+align-items:center;
+padding-top:80px;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:220px;
+height:220px;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+right:-70px;
+top:-70px;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+width:150px;
+height:150px;
+background:rgba(255,255,255,.18);
+border-radius:50%;
+left:-40px;
+bottom:-40px;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:700;
+color:white;
+}
+
+.hero p{
+font-size:1.2rem;
+color:rgba(255,255,255,.95);
+line-height:1.7;
+}
+
+.btn-hero{
+background:white;
+color:#39BDD1;
+padding:13px 38px;
+border-radius:40px;
+font-weight:700;
+display:inline-block;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn-hero:hover{
+color:#39BDD1;
+transform:translateY(-4px);
+box-shadow:0 15px 25px rgba(0,0,0,.15);
+}
+
+.btn-hero-outline{
+border:2px solid white;
+color:white;
+padding:13px 38px;
+border-radius:40px;
+display:inline-block;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn-hero-outline:hover{
+background:white;
+color:#39BDD1;
+}
+
+/* FEATURE */
+
+.feature-icon{
+width:90px;
+height:90px;
+border-radius:50%;
+background:#ECFCFF;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto;
+font-size:40px;
+color:#39BDD1;
+transition:.3s;
+}
+
+.feature-icon:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 20px rgba(57,189,209,.25);
+}
+
+/* CARD */
+
+.card{
+border:none;
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.card-title{
+font-weight:700;
+}
+
+.card-body{
+padding:28px;
+}
+
+.text-primary{
+color:#39BDD1!important;
+}
+
+.badge.bg-primary{
+background:#39BDD1!important;
+}
+
+.btn-primary{
+background:#39BDD1;
+border:none;
+border-radius:40px;
+font-weight:600;
+}
+
+.btn-primary:hover{
+background:#28AFC3;
+}
+
+#packages{
+background:#F3FCFF!important;
+}
+
+/* FOOTER */
+
+.footer{
+background:linear-gradient(135deg,#6ADBEA,#56D0E2);
+color:white;
+padding:45px 0;
+}
+
+.footer h5{
+font-weight:700;
+}
+
+.footer a{
+color:white;
+transition:.3s;
+}
+
+.footer a:hover{
+opacity:.8;
+}
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#65D7E7;
+border-radius:30px;
+}
+
+::-webkit-scrollbar-track{
+background:#EEF9FC;
+}
+
+</style>
 </head>
 <body>
 
@@ -102,7 +259,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Fitur</a>
+                        <a class="nav-link" href="#features">Tentang</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#packages">Paket</a>
@@ -260,7 +417,7 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <h5>Kontak</h5>
-                    <p><i class="fas fa-phone me-2"></i> 0812-3456-7890</p>
+                    <p><i class="fas fa-phone me-2"></i> 0821-1730-4711</p>
                     <p><i class="fas fa-envelope me-2"></i> info@laundryku.com</p>
                 </div>
                 <div class="col-md-4 text-end">
